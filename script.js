@@ -86,7 +86,7 @@ function name(params) {
     gluing = renderChars().replaceAll(' ','')
     document.getElementById('wow').innerHTML = gluing
 console.log(gluing)
-    let adress = `../fightNotat/chars/threeChar/${gluing}.wav`
+    let adress = `chars/${gluing}.wav`
     let audio = new Audio(); audio.src = adress; audio.autoplay = true 
 },user.interval)
     setTimeout(() => {clearInterval(user.interval)}, time);
