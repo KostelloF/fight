@@ -12,6 +12,8 @@ let sample = {
 let alphabetRus = ['л', 'п', 'а', 'э', 'о', 'ю', 'ы', 'и', 'я', 'е', 'ё', 'у', 'г', 'т', 'н']
 let alphabetEng = ['l', 'p', 'a', 'e', 'o', 'yu', 'i', 'yi', 'ya', 'ye', 'yo', 'u', 'g', 't', 'n']
 
+
+
 let user = new Object(sample)
 {
     user.sideHits[0] = +document.getElementById('l').value
@@ -71,7 +73,13 @@ function renderChars() {
     }
 }
 
+console.log()
+console.log()
+console.log()
 
+function name(params) {
+    
+}
 
 
     setInterval(()=>{
