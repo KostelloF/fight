@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+setTimeout(() => {
+console.log(1)
+}, 2000);
+
+let aFunc = (one, two) => {
+    console.log(one + two)
+}
+TId = setTimeout(aFunc, 1000, 5, 2);
+
+clearTimeout(TId)
+
+// setInterval(aFunc, 3000, 5, 2);
+
+
+
+</script>
+</html>
