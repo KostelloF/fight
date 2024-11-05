@@ -2,11 +2,15 @@ let alphabetRus = [['л', 'п'], ['а', 'э', 'о', 'ю', 'ы', 'и', 'я', 'е'
 let alphabetEng = [['l', 'p'], ['a', 'e', 'o', 'yu', 'i', 'yi', 'ya', 'ye', 'yo', 'u'], ['g', 't', 'n']]
 
 let sample = {
-    sets: [[0, 0], [0], [0, 0, 40]],
+    sets: [[0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0]],
     interval: '1',
     time: '50000',
     alphabet: alphabetEng,
-    series: '2',
+    series: "2"
+}
+let randomNum
+let randomSeries = (i) => {
+    return oneChar([20, 40, 30, 10]) + 1
 }
 
 let user = new Object(sample)
@@ -55,10 +59,6 @@ function signal(someObject) {
     let height = oneChar(someObject.sets[2])
     let heightCut = [...someObject.sets[2]]; heightCut.pop()
     let height2 = oneChar(heightCut);
-    console.log(hit)
-    console.log(height)
-    console.log(heightCut)
-    console.log(height2)
 
     if (hit === 4 || hit === 5 || hit === 6 || hit === 9 || hit === 'n') {
         return '' + side + hit + height
@@ -66,14 +66,11 @@ function signal(someObject) {
         return '' + side + hit + height2
     }
 }
-console.log(signal(user))
-
-
 let kombination = (someObject) => {
     let ms = 0
     let charAlph = ''
-
-    for (let i = 0; i < someObject.series; i++) {
+    randomNum = randomSeries()
+    for (let i = 0; i < (someObject.series !== '69' ? someObject.series : randomNum); i++) {
         setTimeout(() => {
             let oneSig = signal(someObject)
             let audio = new Audio(); audio.src = `chars/${oneSig}.wav`; audio.autoplay = true
@@ -82,8 +79,8 @@ let kombination = (someObject) => {
                 charAlph += someObject.alphabet[i][oneSig[i]]
                 if (i === oneSig.length - 1) charAlph += "\n"
             }
-            console.log(charAlph.toUpperCase().replaceAll('UNDEFINED',''))
-            document.getElementById('notationHit').innerHTML = charAlph.toUpperCase().replaceAll('UNDEFINED','')
+            console.log(charAlph.toUpperCase().replaceAll('UNDEFINED', ''))
+            document.getElementById('notationHit').innerHTML = charAlph.toUpperCase().replaceAll('UNDEFINED', '')
         }, ms);
         ms += 800
     }
@@ -93,19 +90,20 @@ document.getElementById('start').addEventListener('click', () => {
     getInputs()
     let inCicle
     let cicle = setTimeout(function logM() {
-        inCicle = setTimeout(logM, user.series * 1000 + 1000 * user.interval)
         kombination(user)
+        inCicle = setTimeout(logM, (user.series !== '69' ? user.series : randomNum) * 1000 + 1000 * user.interval)
     }, 0)
 
     setTimeout(() => {
         clearTimeout(cicle)
         clearTimeout(inCicle)
-        console.log('ok')
     }, user.time)
 })
 
 document.getElementById('reset').addEventListener('click', () => {
     location.reload()
 })
+
+
 
 
