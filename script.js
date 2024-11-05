@@ -2,7 +2,7 @@ let alphabetRus = [['л', 'п'], ['а', 'э', 'о', 'ю', 'ы', 'и', 'я', 'е'
 let alphabetEng = [['l', 'p'], ['a', 'e', 'o', 'yu', 'i', 'yi', 'ya', 'ye', 'yo', 'u'], ['g', 't', 'n']]
 
 let sample = {
-    sets: [[50, 50], [10, 10, 10, 10, 10, 10, 10, 10, 10, 10], [30, 30, 40]],
+    sets: [[0, 0], [0], [0, 0, 40]],
     interval: '1',
     time: '50000',
     alphabet: alphabetEng,
@@ -54,13 +54,20 @@ function signal(someObject) {
     let hit = oneChar(someObject.sets[1])
     let height = oneChar(someObject.sets[2])
     let heightCut = [...someObject.sets[2]]; heightCut.pop()
-    let height2 = oneChar(heightCut)
-    if (hit === 4 || hit === 5 || hit === 6 || hit === 9) {
+    let height2 = oneChar(heightCut);
+    console.log(hit)
+    console.log(height)
+    console.log(heightCut)
+    console.log(height2)
+
+    if (hit === 4 || hit === 5 || hit === 6 || hit === 9 || hit === 'n') {
         return '' + side + hit + height
     } else {
         return '' + side + hit + height2
     }
 }
+console.log(signal(user))
+
 
 let kombination = (someObject) => {
     let ms = 0
@@ -76,7 +83,7 @@ let kombination = (someObject) => {
                 if (i === oneSig.length - 1) charAlph += "\n"
             }
             console.log(charAlph.toUpperCase().replaceAll('UNDEFINED',''))
-            document.getElementById('wow').innerHTML = charAlph.toUpperCase().replaceAll('UNDEFINED','')
+            document.getElementById('notationHit').innerHTML = charAlph.toUpperCase().replaceAll('UNDEFINED','')
         }, ms);
         ms += 800
     }
@@ -100,3 +107,5 @@ document.getElementById('start').addEventListener('click', () => {
 document.getElementById('reset').addEventListener('click', () => {
     location.reload()
 })
+
+

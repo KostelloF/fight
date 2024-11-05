@@ -11,54 +11,63 @@
 
 <body>
     <div class="container">
-        <div class="item item_1">
-            <div class="item item_1 logo">
+        <div class="item header">
+            <div class="item header logo">
                 <p><img src="img/logoBn.png" alt="Реквизиты автора" title="5536 9138 6307 7513"></p>
             </div>
-            <div class="item item_1 label">
-                <p1>БОЕВАЯ НОТАЦИЯ</p1>
-            </div>
-            <div class="item item_1 link">
-                <p><a href="https://www.youtube.com/@boevayanotaciya/featured"><img src="img/logoYou.png" alt="Ютуб" title="Ютуб"></a>
-                    <a href="https://t.me/boevayanotaciya"><img src="img/logoTel.png" alt="Телеграм" title="Телеграм"></a>
-                    <a href="https://www.instagram.com/boevayanotaciya/"><img src="img/logoInst.png" alt="Инстаграм" title="Инстаграм"></a></p>
+            <h1>БОЕВАЯ НОТАЦИЯ</h1>
+            <div class="item header link">
+                <p><a href="https://www.youtube.com/@boevayanotaciya/featured"><img src="img/logoYou.png" alt="Ютуб"
+                            title="Ютуб"></a>
+                    <a href="https://t.me/boevayanotaciya"><img src="img/logoTel.png" alt="Телеграм"
+                            title="Телеграм"></a>
+                    <a href="https://www.instagram.com/boevayanotaciya/"><img src="img/logoInst.png" alt="Инстаграм"
+                            title="Инстаграм"></a>
+                </p>
             </div>
         </div>
-        <div class="item item_2">
-            <form class="gut"><p2>СТОРОНА (100%)</p2></form>
-            <form>
-                <span>Лев</span> <input type="number" id='l' value='50'>
-                <span>Пр</span> <input type="number" id='p' value='50'>
+        <div class="item sidebar">
+            <form class="parameter">
+                <h2>СТОРОНА (100%)</h2>
             </form>
-            <form class="gut"><p2>УДАРЫ (100%)</p2></form>
-            <p>Руками</p>
-            <form><span>прямой А</span> <input type="number" id="a" value='10'></form>
-            <form><span>боковой Э</span> <input type="number" id="e" value='10'></form>
-            <form><span>снизу О</span> <input type="number" id="o" value='10'></form>
-            <form><span>с разворота Ю</span> <input type="number" id="yu" value='10'></form>
-            <p>Ногами</p>
-            <form><span>прямой Я</span> <input type="number" id="ya" value='10'></form>
-            <form><span>боковой Ы</span> <input type="number" id="i" value='10'></form>
-            <form><span>с разворота И</span> <input type="number" id="yi" value='10'></form>
-            <p>Локтями</p>
-            <form><span>простой E</span> <input type="number" id="ye" value='10'></form>
-            <form><span>с разворота Ё</span> <input type="number" id="yo" value='10'></form>
-            <p>Коленями</p>
-            <form><span>простой У</span> <input type="number" id="u" value='10'></form>
-            <form class="gut"><p2>ВЫСОТА (100%)</p2></form>
-            <form des="height"><span>по голове Г</span> <input type="number" id="g" value='40'></form>
-            <form des="height"><span>по туловищу Т</span> <input type="number" id="t" value='30'></form>
-            <form des="height"><span>по ногам Н</span> <input type="number" id="n" value='30'></form>
-        </div>
-        <div class="item item_4"> <p id="wow"></p>
-            <!-- <img src="lag.jpg" alt=""> -->
-         </div>
-        <div class="item item_5">
             <form>
-                <span>Скорость(сек)</span> <input type="number" id="speed" value='3'></Ы>
+                <span>Л</span> <input type="number" id='l' value='50'>
+                <span>П</span> <input type="number" id='p' value='50'>
+            </form>
+            <form class="parameter">
+                <h2>УДАРЫ (100%)</h2>
+            </form>
+            <h3>Руками</h3>
+            <form><span>прямой А</span> <input type="number" id="a" value='20'></form>
+            <form><span>боковой Э</span> <input type="number" id="e" value='15'></form>
+            <form><span>снизу О</span> <input type="number" id="o" value='11'></form>
+            <form><span>с разворота Ю</span> <input type="number" id="yu" value='4'></form>
+            <h3>Ногами</h3>
+            <form><span>прямой Я</span> <input type="number" id="ya" value='10'></form>
+            <form><span>боковой Ы</span> <input type="number" id="i" value='20'></form>
+            <form><span>с разворота И</span> <input type="number" id="yi" value='5'></form>
+            <h3>Локтями</h3>
+            <form><span>простой E</span> <input type="number" id="ye" value='8'></form>
+            <form><span>с разворота Ё</span> <input type="number" id="yo" value='2'></form>
+            <h3>Коленями</h3>
+            <form><span>простой У</span> <input type="number" id="u" value='5'></form>
+            <form class="parameter">
+                <h2>ВЫСОТА (100%)</h2>
+            </form>
+            <form><span>по голове Г</span> <input type="number" id="g" value='50'></form>
+            <form><span>по туловищу Т</span> <input type="number" id="t" value='30'></form>
+            <form><span>по ногам Н</span> <input type="number" id="n" value='20'></form>
+        </div>
+        <div class="item interface">
+            <p id="notationHit"></p>
+            <!-- <img src="lag.jpg" alt=""> -->
+        </div>
+        <div class="item footer">
+            <form>
+                <span>Скорость(сек)</span> <input type="number" id="speed" value='3'>
                 <span>Время(мин)</span> <input type="number" id="time" value='1'>
                 <span>Серия(уд)</span> <input type="number" id="series" value='2'>
-              
+
                 <button type="button" id="start">СТАРТ</button>
                 <button type="button" id="reset">СБРОС</button>
             </form>
