@@ -13,16 +13,17 @@
     <div class="container">
         <div class="item header">
             <div class="item header logo">
-                <p><img src="img/logoBn.png" alt="Реквизиты автора" title="5536 9138 6307 7513"></p>
+                <p><a href="#main" rel="noopener"><img src="img/logoBn.png" alt="Реквизиты автора"
+                            title="5536 9138 6307 7513"></a></p>
             </div>
             <h1>БОЕВАЯ НОТАЦИЯ</h1>
             <div class="item header link">
-                <p><a href="https://www.youtube.com/@boevayanotaciya/featured"><img src="img/logoYou.png" alt="Ютуб"
-                            title="Ютуб"></a>
-                    <a href="https://t.me/boevayanotaciya"><img src="img/logoTel.png" alt="Телеграм"
-                            title="Телеграм"></a>
-                    <a href="https://www.instagram.com/boevayanotaciya/"><img src="img/logoInst.png" alt="Инстаграм"
-                            title="Инстаграм"></a>
+                <p><a href="https://www.youtube.com/@boevayanotaciya/featured" target="_blank" rel="noopener"><img
+                            src="img/logoYou.png" alt="Ютуб" title="Ютуб"></a>
+                    <a href="https://t.me/boevayanotaciya" target="_blank" rel="noopener"><img src="img/logoTel.png"
+                            alt="Телеграм" title="Телеграм"></a>
+                    <a href="https://www.instagram.com/boevayanotaciya/" target="_blank" rel="noopener"><img
+                            src="img/logoInst.png" alt="Инстаграм" title="Инстаграм"></a>
                 </p>
             </div>
         </div>
@@ -30,51 +31,83 @@
             <form class="parameter">
                 <h2>СТОРОНА (100%)</h2>
             </form>
-            <form>
-                <span>Л</span> <input type="number" id='l' value='50'>
-                <span>П</span> <input type="number" id='p' value='50'>
+            <form class='hitClear' id='inline'> Л <input class='side' type="number" id='l' value='50'></form>
+            <form class='hitClear' id='inline'> &nbsp &nbsp П <input class='side' type="number" id='p' value='50'>
             </form>
             <form class="parameter">
                 <h2>УДАРЫ (100%)</h2>
             </form>
             <h3>Руками</h3>
-            <form><span>прямой А</span> <input type="number" id="a" value='23'></form>
-            <form><span>боковой Э</span> <input type="number" id="e" value='15'></form>
-            <form><span>снизу О</span> <input type="number" id="o" value='11'></form>
-            <form><span>с разворота Ю</span> <input type="number" id="yu" value='4'></form>
+            <form class='hitClear'>прямой А <input class='hit' type="number" id="a" value='23'></form>
+            <form class='hitClear'>боковой Э <input class='hit' type="number" id="e" value='15'></form>
+            <form class='hitClear'>снизу О <input class='hit' type="number" id="o" value='11'></form>
+            <form class='hitClear'>с разворота Ю <input class='hit' type="number" id="yu" value='4'></form>
             <h3>Ногами</h3>
-            <form><span>прямой Я</span> <input type="number" id="ya" value='10'></form>
-            <form><span>боковой Ы</span> <input type="number" id="i" value='20'></form>
-            <form><span>с разворота И</span> <input type="number" id="yi" value='5'></form>
+            <form class='hitClear'>прямой Я <input class='hit' type="number" id="ya" value='10'></form>
+            <form class='hitClear'>боковой Ы <input class='hit' type="number" id="i" value='20'></form>
+            <form class='hitClear'>с разворота И <input class='hit' type="number" id="yi" value='5'></form>
             <h3>Локтями</h3>
-            <form><span>простой E</span> <input type="number" id="ye" value='5'></form>
-            <form><span>с разворота Ё</span> <input type="number" id="yo" value='2'></form>
+            <form class='hitClear'>простой E <input class='hit' type="number" id="ye" value='5'></form>
+            <form class='hitClear'>с разворота Ё <input class='hit' type="number" id="yo" value='2'></form>
             <h3>Коленями</h3>
-            <form><span>простой У</span> <input type="number" id="u" value='5'></form>
+            <form class='hitClear'>простой У <input class='hit' type="number" id="u" value='5'></form>
             <form class="parameter">
                 <h2>ВЫСОТА (100%)</h2>
             </form>
-            <form><span>по голове Г</span> <input type="number" id="g" value='50'></form>
-            <form><span>по туловищу Т</span> <input type="number" id="t" value='30'></form>
-            <form><span>по ногам Н</span> <input type="number" id="n" value='20'></form>
+            <form class='hitClear'>по голове Г <input class='height' type="number" id="g" value='50'></form>
+            <form class='hitClear'>по туловищу Т <input class='height' type="number" id="t" value='30'></form>
+            <form class='hitClear'>по ногам Н <input class='height' type="number" id="n" value='20'></form>
+            <form action="">
+                <p></p>
+                <button class="set" id="save">сохранить</button>
+                <button class="set" id="take">вызвать</button>
+            </form>
         </div>
         <div class="item interface">
-            <div id="notationHit"></div>
-            <!-- <img src="lag.jpg" alt=""> -->
+            <div class="notationHit"></div>
+            <div class="instruction">
+                <h2>Добро пожаловать в тренажер Боевой нотации!<br></h2>
+                <ul>Изменить соотношение ударов:</ul>
+                <li>СТОРОНА - процент ударов левой и правой рукой</li>
+                <li>УДАРЫ - вид удара в процентах</li>
+                <li>ВЫСОТА - высота нанесения удара в процентах</li>
+                <ul>Изменить настройки серии ударов (внизу):</ul>
+                <li>Скорость (секунд) - время между ударами(сериями ударов)</li>
+                <li>Время (минут) - время тренировки</li>
+                <li>Серия (ударов) - количество ударов в серии</li>
+                <ul>Запустить тренировку:</ul>
+                <li>кнопка "СТАРТ"</li>
+                <ul>Остановить тренировку (сбросить настройки):</ul>
+                <li>кнопка "СБРОС"</li>
+                <ul>Сохранить введенные настройки:</ul>
+                <li>кнопка "сохранить"</li>
+                <ul>Вызвать сохраненные настройки:</ul>
+                <li>кнопка "вызвать"</li>
+                <ul>Дополнения:</ul>
+                <li>для быстрого сброса одного параметра нажмите на его название</li>
+                <li>для вызова случайных серий ударов введите в окне "СЕРИЯ" значение 69</li>
+                </ul>
+
+
+            </div>
         </div>
         <div class="item footer">
-            <form>
-                <span>Скорость(сек)</span> <input type="number" id="speed" value='3'>
-                <span>Время(мин)</span> <input type="number" id="time" value='5'>
-                <span>Серия(уд)</span> <input type="number" id="series" value='2'>
+            <formid='inline'>
+                <form class='hitClear' id='inline'>Скорость(сек)<input type="number" id="speed" value='3'></form>
+                <form class='hitClear' id='inline'>Время(мин) <input type="number" id="time" value='5'></form>
+                <form class='hitClear' id='inline'>Серия(уд) <input type="number" id="series" value='2'></form>
 
                 <button type="button" id="start">СТАРТ</button>
                 <button type="button" id="reset">СБРОС</button>
-            </form>
+                </formid=>
         </div>
     </div>
+    <a href="#" id="main">
+        <div id="wind"> 5536 9138 6307 7513</div>
+    </a>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

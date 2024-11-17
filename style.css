@@ -5,6 +5,7 @@ body {
 h2 {
     color: black;
     font-size: 90%;
+    text-align: center;
 }
 
 h3 {
@@ -43,6 +44,11 @@ img {
     height: 40px;
 }
 
+.super {
+    max-width: 100%;
+    height: auto;
+}
+
 a:hover img {
     transform: scale(1.1);
     opacity: 0.9;
@@ -62,13 +68,22 @@ input {
 }
 
 .interface {
+    font-size: 15px;
+    border: 0px;
+}
+
+.interface ul {
+    margin: 5px;
+    padding: 0px;
+    text-align: center;
+    color: red;
+}
+
+.notationHit {
     text-align: center;
     color: red;
     font-size: 50px;
-    font-weight: bold;
 }
-
-#notationHit {}
 
 .footer {
     position: sticky;
@@ -80,4 +95,44 @@ input {
 
 button {
     color: red;
+}
+
+#inline {
+    display: inline-block;
+
+}
+
+.set {
+    font-size: 60%;
+    color: gray;
+}
+
+
+#main {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+#wind {
+    width: 150px;
+    height: 18px;
+    text-align: center;
+    border: 3px solid red;
+    border-radius: 10px;
+    color: red;
+    position: absolute;
+    top: 0;
+    right: 20;
+    bottom: 0;
+    left: 40px;
+    background-color: white;
+}
+
+#main:target {
+    display: block;
 }
