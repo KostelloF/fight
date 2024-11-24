@@ -44,7 +44,7 @@ img {
     height: 40px;
 }
 
-.super {
+.visual {
     max-width: 100%;
     height: auto;
 }
@@ -95,6 +95,7 @@ input {
 
 button {
     color: red;
+    height: 30px;
 }
 
 #inline {
