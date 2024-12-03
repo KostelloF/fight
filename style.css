@@ -4,13 +4,14 @@ body {
 
 h2 {
     color: black;
-    font-size: 90%;
+    font-size: 80%;
     text-align: center;
 }
 
 h3 {
     color: rgba(28, 26, 26, 0.444);
-    margin: 0%
+    margin: 0%;
+    font-size: 90%;
 }
 
 .container {
@@ -30,18 +31,13 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1/3;
     text-align: center;
     color: rgb(69, 69, 69);
     font-size: 50%;
     padding: 0px;
     margin: 0px;
     border: 0px;
-}
-
-img {
-    height: 40px;
 }
 
 .visual {
@@ -60,7 +56,9 @@ a:hover img {
 }
 
 input {
-    width: 37px;
+    width: 30px;
+    height: 20px;
+    text-align: center;
 }
 
 .parameter {
@@ -87,9 +85,8 @@ input {
 
 .footer {
     position: sticky;
-    bottom: 0;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    bottom: 10px;
+    grid-column: 1/3;
     background-color: rgb(236, 236, 236);
 }
 
@@ -136,4 +133,15 @@ button {
 
 #main:target {
     display: block;
+}
+
+
+
+fieldset {
+    border: 0px;
+    padding: 0px;
+}
+
+legend {
+    text-align: right;
 }

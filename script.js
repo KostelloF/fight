@@ -1,21 +1,19 @@
 import * as action from './actions.js'
-
-// сохранение файлов в local storage
-// action.lsAandI()
+import * as data from './data.js'
 
 //обнуляем каждое значение по клику
 let clearIndex = document.querySelectorAll('.hitClear')
 clearIndex.forEach(element => {
-    element.onclick = action.hitClick
+    element.onclick = data.setClearInputs
 })
 
-//заносим данные из инпутов в local storage
+//заносим данные из инпутов в LS
 let addHit = document.querySelector('#save')
-addHit.onclick = action.action
+addHit.onclick = data.saveInputsToLs
 
-//вызываем данные из local storage в инпуты
+//вызываем данные из LS в инпуты
 let inputHit = document.querySelector('#take')
-inputHit.onclick = action.inputHits
+inputHit.onclick = data.getInputsFromLS
 
 // обработчик клика с запуском комбинации 
 let butStart = document.getElementById('start')

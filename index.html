@@ -1,69 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тренировка ударов - бокс, кикбоксинг, тайский бокс</title>
+    <meta name="keywords" content="джеб, апперкот, хук, лоукик, хайкик, фронткик, бэкфист, панч" />
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="style.css">
+    <title>Тренировка ударов - бокс, кикбоксинг, тайский бокс</title>
 </head>
 
 <body>
     <div class="container">
         <div class="item header">
             <div class="item header logo">
-                <p><a href="#main" rel="noopener"><img src="img/logoBn.png" alt="Реквизиты автора"
-                            title="5536 9138 6307 7513"></a></p>
+                <div><a href="#main" rel="noopener"><img src="img/logoBn.png" alt="Реквизиты автора"
+                            title="5536 9138 6307 7513" width="40"></a></div>
             </div>
             <h1>БОЕВАЯ НОТАЦИЯ</h1>
             <div class="item header link">
-                <p><a href="https://www.youtube.com/watch?v=JNB0Dpd-zZs" target="_blank" rel="noopener"><img
-                            src="img/logoYou.png" alt="Ютуб" title="Ютуб"></a>
+                <div><a href="https://www.youtube.com/watch?v=JNB0Dpd-zZs" target="_blank" rel="noopener"><img
+                            src="img/logoYou.png" alt="Cсылка на Ютуб канал" title="Ютуб" width="40"></a>
                     <a href="https://t.me/boevayanotaciya" target="_blank" rel="noopener"><img src="img/logoTel.png"
-                            alt="Телеграм" title="Телеграм"></a>
+                            alt="Cсылка на Телеграм канал" title="Телеграм" width="40"></a>
                     <a href="https://www.instagram.com/fightnotation/" target="_blank" rel="noopener"><img
-                            src="img/logoInst.png" alt="Инстаграм" title="Инстаграм"></a>
-                </p>
+                            src="img/logoInst.png" alt="Cсылка на Инстаграм канал" title="Инстаграм" width="40"></a>
+                </div>
             </div>
         </div>
         <div class="item sidebar">
-            <form class="parameter">
+            <div class="parameter">
                 <h2>СТОРОНА (100%)</h2>
-            </form>
-            <form class='hitClear' id='inline'> Л <input class='side' type="number" id='l' value='50'></form>
-            <form class='hitClear' id='inline'> &nbsp &nbsp П <input class='side' type="number" id='p' value='50'>
-            </form>
-            <form class="parameter">
+            </div>
+            <fieldset>
+                <legend><h3>Левая &nbsp / &nbsp Правая</h3></legend>
+                <form class='hitClear' id='inline'> Л <input class='side' type="number" id='l' value='50' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear' id='inline'> &nbsp &nbsp П <input class='side' type="number" id='p' value='50' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+            </fieldset>
+            <div class="parameter">
                 <h2>УДАРЫ (100%)</h2>
-            </form>
-            <h3>Руками</h3>
-            <form class='hitClear'>прямой А <input class='hit' type="number" id="a" value='23'></form>
-            <form class='hitClear'>боковой Э <input class='hit' type="number" id="e" value='15'></form>
-            <form class='hitClear'>снизу О <input class='hit' type="number" id="o" value='11'></form>
-            <form class='hitClear'>с разворота Ю <input class='hit' type="number" id="yu" value='4'></form>
-            <h3>Ногами</h3>
-            <form class='hitClear'>прямой Я <input class='hit' type="number" id="ya" value='10'></form>
-            <form class='hitClear'>боковой Ы <input class='hit' type="number" id="i" value='20'></form>
-            <form class='hitClear'>с разворота И <input class='hit' type="number" id="yi" value='5'></form>
-            <h3>Локтями</h3>
-            <form class='hitClear'>простой E <input class='hit' type="number" id="ye" value='5'></form>
-            <form class='hitClear'>с разворота Ё <input class='hit' type="number" id="yo" value='2'></form>
-            <h3>Коленями</h3>
-            <form class='hitClear'>простой У <input class='hit' type="number" id="u" value='5'></form>
-            <form class="parameter">
-                <h2>ВЫСОТА (100%)</h2>
-            </form>
-            <form class='hitClear'>по голове Г <input class='height' type="number" id="g" value='50'></form>
-            <form class='hitClear'>по туловищу Т <input class='height' type="number" id="t" value='30'></form>
-            <form class='hitClear'>по ногам Н <input class='height' type="number" id="n" value='20'></form>
-            <form action="">
-                <p></p>
-                <button class="set" id="save">сохранить</button>
-                <button class="set" id="take">вызвать</button>
-                <!-- <button class="module" id="take">модуль</button>
-                <button class="pusk" id="take">пуск</button> -->
-            </form>
+            </div>
+            <fieldset>
+                <legend>
+                    <h3>Руками</h3>
+                </legend>
+                <!-- <label for="a">прямой А</label> -->
+                <form class='hitClear'>прямой А <input class='hit' type="number" id="a" value='23' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear'>боковой Э <input class='hit' type="number" id="e" value='15' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear'>снизу О <input class='hit' type="number" id="o" value='11' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear'>с разворота Ю <input class='hit' type="number" id="yu" value='4' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h3>Ногами</h3>
+                </legend>
+                <form class='hitClear'>прямой Я <input class='hit' type="number" id="ya" value='10' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear'>боковой Ы <input class='hit' type="number" id="i" value='20' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear'>с разворота И <input class='hit' type="number" id="yi" value='5' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h3>Локтями</h3>
+                </legend>
+                <form class='hitClear'>простой E <input class='hit' type="number" id="ye" value='5' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear'>с разворота Ё <input class='hit' type="number" id="yo" value='2' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h3>Коленями</h3>
+                </legend>
+                <form class='hitClear'>простой У <input class='hit' type="number" id="u" value='5' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <div class="parameter">
+            </fieldset>
+            <h2>ВЫСОТА (100%)</h2>
+            <fieldset>
+                <form class='hitClear'>по голове Г <input class='height' type="number" id="g" value='50' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear'>по туловищу Т <input class='height' type="number" id="t" value='30' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear'>по ногам Н <input class='height' type="number" id="n" value='20' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+            </fieldset>
+            <div>
+                <br>
+                <button type="button" class="set" id="save">сохранить</button>
+                <button type="button" class="set" id="take">вызвать</button>
+            </div>
         </div>
         <div class="item interface">
             <div class="notationHit"></div>
@@ -95,12 +114,12 @@
         </div>
         <div class="item footer">
             <formid='inline'>
-                <form class='hitClear' id='inline'>Скорость(сек)<input type="number" id="speed" value='3'></form>
-                <form class='hitClear' id='inline'>Время(мин) <input type="number" id="time" value='5'></form>
-                <form class='hitClear' id='inline'>Серия(уд) <input type="number" id="series" value='2'></form>
+                <form class='hitClear' id='inline'>Скорость(сек)<input type="number" id="speed" value='3' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear' id='inline'>Время(мин) <input type="number" id="time" value='5' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
+                <form class='hitClear' id='inline'>Серия(уд) <input type="number" id="series" value='2' inputmode="numeric" min="0" oninput="validity.valid||(value='')"></form>
 
                 <button type="button" id="start">СТАРТ</button>
-                <button type="button" id="reset">СБРОС</button>
+                <button type="reset" id="reset">СБРОС</button>
                 </formid=>
         </div>
     </div>
@@ -111,7 +130,7 @@
     <script src="actions.js" type="module"></script>
     <script src="script.js" type="module"></script>
 
-    
+
 
 </body>
 
